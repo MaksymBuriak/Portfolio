@@ -12,14 +12,7 @@ import edu.ncsu.csc326.coffeemaker.exceptions.RecipeException;
 import junit.framework.TestCase;
 
 
-/**
- * 
- * @author Sarah Heckman
- *
- * Extended by Mike Whalen
- *
- * Unit tests for CoffeeMaker class.
- */
+//Unit tests for CoffeeMaker class
 
 public class CoffeeMakerTest extends TestCase {
 	
