@@ -1,20 +1,3 @@
-/*
- * Copyright (c) 2009,  Sarah Heckman, Laurie Williams, Dright Ho
- * All Rights Reserved.
- * 
- * Permission has been explicitly granted to the University of Minnesota 
- * Software Engineering Center to use and distribute this source for 
- * educational purposes, including delivering online education through
- * Coursera or other entities.  
- * 
- * No warranty is given regarding this software, including warranties as
- * to the correctness or completeness of this software, including 
- * fitness for purpose.
- * 
- * Modifications
- * 20171113 - Michael W. Whalen - Extended with additional recipe.
- * 20171114 - Ian J. De Silva   - Updated to JUnit 4; fixed variable names.
- */
 package edu.ncsu.csc326.coffeemaker;
 
 import static org.junit.Assert.assertEquals;
@@ -31,13 +14,7 @@ import edu.ncsu.csc326.coffeemaker.exceptions.RecipeException;
 
 
 
-/**
- * Unit tests for CoffeeMaker class.
- * 
- * @author Sarah Heckman
- *
- * Extended by Mike Whalen
- */
+//Unit tests for CoffeeMaker class.
 
 public class CoffeeMakerTest {
 	
@@ -94,10 +71,7 @@ public class CoffeeMakerTest {
 
 
 		stubRecipies = new Recipe [] {recipe1, recipe2, recipe3};
-		when(recipeBookStub.getRecipes()).thenReturn(stubRecipies);
-		//when(inv.getChocolate()).th
-		
-	    //  when(stockServiceMock.getPrice(microsoftStock)).thenReturn(1000.00)
+		when(recipeBookStub.getRecipes()).thenReturn(stubRecipies);		
 	}
 	
 	@Test
@@ -106,9 +80,7 @@ public class CoffeeMakerTest {
 		try {
 			coffeeMaker.addInventory("sdf", "ifgjdi", "asdf", "sdfdgfgh");
 			assertTrue(true);
-		} catch (InventoryException e) {
-			// TODO Auto-generated catch block
-			
+		} catch (InventoryException e) {			
 			assertFalse(false);
 		}
 	}
@@ -119,7 +91,6 @@ public class CoffeeMakerTest {
 			coffeeMaker.addInventory("-44", "4", "6", "3");
 			assertTrue(true);
 		} catch (InventoryException e) {
-			// TODO Auto-generated catch block
 			assertFalse(false);
 		}
 	}
@@ -130,7 +101,6 @@ public class CoffeeMakerTest {
 			coffeeMaker.addInventory("44", "-4", "6", "3");
 			assertTrue(true);
 		} catch (InventoryException e) {
-			// TODO Auto-generated catch block
 			assertFalse(false);
 		}
 	}
@@ -141,7 +111,6 @@ public class CoffeeMakerTest {
 			coffeeMaker.addInventory("44", "4", "-6", "3");
 			assertTrue(true);
 		} catch (InventoryException e) {
-			// TODO Auto-generated catch block
 			assertFalse(false);
 		}
 	}
@@ -152,7 +121,6 @@ public class CoffeeMakerTest {
 			coffeeMaker.addInventory("44", "4", "6", "-33");
 			assertTrue(true);
 		} catch (InventoryException e) {
-			// TODO Auto-generated catch block
 			assertFalse(false);
 		}
 	}
@@ -162,9 +130,7 @@ public class CoffeeMakerTest {
 		try {
 			coffeeMaker.addInventory("4", "ifgjdi", "asdf", "sdfdgfgh");
 			assertTrue(true);
-		} catch (InventoryException e) {
-			// TODO Auto-generated catch block
-			
+		} catch (InventoryException e) {			
 			assertFalse(false);
 		}
 	}
@@ -175,8 +141,6 @@ public class CoffeeMakerTest {
 			coffeeMaker.addInventory("4", "4", "asdf", "sdfdgfgh");
 			assertTrue(true);
 		} catch (InventoryException e) {
-			// TODO Auto-generated catch block
-			
 			assertFalse(false);
 		}
 	}
@@ -187,8 +151,6 @@ public class CoffeeMakerTest {
 			coffeeMaker.addInventory("4", "5", "5", "sdfdgfgh");
 			assertTrue(true);
 		} catch (InventoryException e) {
-			// TODO Auto-generated catch block
-			
 			assertFalse(false);
 		}
 	}
@@ -199,7 +161,6 @@ public class CoffeeMakerTest {
 			coffeeMaker.addInventory("444444444444444444444444444444444444444444444444444444444444", "111111111111111111111111111111111111111111111", "11111111111111111111111222222222222222222222", "33333333333333333333333333333333334444444444444443");
 			assertTrue(true);
 		} catch (InventoryException e) {
-			// TODO Auto-generated catch block
 			assertFalse(false);
 		}
 	}
@@ -210,7 +171,6 @@ public class CoffeeMakerTest {
 			coffeeMaker.addInventory("-55", "-10", "-19", "-9");
 			assertTrue(true);
 		} catch (InventoryException e) {
-			// TODO Auto-generated catch block
 			assertFalse(false);
 		}
 	}
@@ -224,7 +184,6 @@ public class CoffeeMakerTest {
 			coffeeMaker.addInventory("4", "9", "5", "3");
 			assertEquals(19, inv.getCoffee());
 		} catch (InventoryException e) {
-			// TODO Auto-generated catch block
 			assertFalse(false);
 		}
 	}
@@ -237,7 +196,6 @@ public class CoffeeMakerTest {
 			coffeeMaker.addInventory("4", "10", "5", "3");
 			assertEquals(25, inv.getMilk());
 		} catch (InventoryException e) {
-			// TODO Auto-generated catch block
 			assertFalse(false);
 		}
 	}
@@ -250,7 +208,6 @@ public class CoffeeMakerTest {
 			coffeeMaker.addInventory("4", "9", "5", "3");
 			assertEquals(20, inv.getSugar());
 		} catch (InventoryException e) {
-			// TODO Auto-generated catch block
 			assertFalse(false);
 		}
 	}
@@ -263,7 +220,6 @@ public class CoffeeMakerTest {
 			coffeeMaker.addInventory("4", "9", "5", "3");
 			assertEquals(18, inv.getChocolate());
 		} catch (InventoryException e) {
-			// TODO Auto-generated catch block
 			assertFalse(false);
 		}
 	}
@@ -287,8 +243,6 @@ public class CoffeeMakerTest {
 	@Test
 	public	void testPurchaseWithRightAmmountToCheckInventoryRemainings() throws RecipeException {
 		coffeeMaker = new CoffeeMaker(recipeBookStub, new Inventory());
-		//Inventory inv = new Inventory();
-	
 		coffeeMaker.makeCoffee(0, 50);
 		assertEquals("Coffee: 13\n" + 
 				"Milk: 12\n" + 
@@ -297,9 +251,7 @@ public class CoffeeMakerTest {
 	}
 	@Test
 	public	void testPurchaseWithRightAmmountToCheckInventoryRemainings1() throws RecipeException {
-		coffeeMaker = new CoffeeMaker(recipeBookStub, new Inventory());
-		//Inventory inv = new Inventory();
-	
+		coffeeMaker = new CoffeeMaker(recipeBookStub, new Inventory());	
 		coffeeMaker.makeCoffee(0, -5);
 		assertEquals("Coffee: 15\n" + 
 				"Milk: 15\n" + 
@@ -309,14 +261,11 @@ public class CoffeeMakerTest {
 	@Test
 	public	void testPurchaseToCheckRecipeExists() throws RecipeException {
 		coffeeMaker = new CoffeeMaker(recipeBookStub, new Inventory());
-		//Inventory inv = new Inventory();
 		assertEquals(5,coffeeMaker.makeCoffee(6, 5));
 	}
 	@Test
 	public	void testPurchaseToCheckRecipeExists1() throws RecipeException {
 		coffeeMaker = new CoffeeMaker(recipeBookStub, new Inventory());
-		//Inventory inv = new Inventory();
-
 		assertEquals(5,coffeeMaker.makeCoffee(0, 55));
 	}
 	
